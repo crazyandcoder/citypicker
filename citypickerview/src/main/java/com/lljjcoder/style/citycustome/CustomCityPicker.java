@@ -338,7 +338,7 @@ public class CustomCityPicker implements CanShow, OnWheelChangedListener {
         List<CustomCityData> provinceList = config.getCityDataList();
         CustomCityData province = provinceList.get(pCurrent);
         List<CustomCityData> cityDataList = province.getList();
-        if (cityDataList == null) return;
+        if (cityDataList == null || cityDataList.size() <= cCurrent) return;
         CustomCityData city = cityDataList.get(cCurrent);
         List<CustomCityData> areaList = city.getList();
         if (areaList == null) return;
