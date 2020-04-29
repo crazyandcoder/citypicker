@@ -8,7 +8,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v4.view.animation.FastOutSlowInInterpolator;
+import androidx.interpolator.view.animation.FastOutSlowInInterpolator;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,7 +27,6 @@ import com.lljjcoder.bean.ProvinceBean;
 import com.lljjcoder.citywheel.CityParseHelper;
 import com.lljjcoder.style.citylist.Toast.ToastUtils;
 import com.lljjcoder.style.citypickerview.R;
-import com.lljjcoder.style.citypickerview.widget.CanShow;
 import com.lljjcoder.utils.utils;
 
 import java.util.List;

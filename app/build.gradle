@@ -5,13 +5,13 @@ android {
         javaMaxHeapSize "4g"
     }
 
-    compileSdkVersion 24
+    compileSdkVersion 29
     buildToolsVersion '28.0.3'
 
     defaultConfig {
         applicationId "com.ihidea.as.citypicker"
         minSdkVersion 14
-        targetSdkVersion 15
+        targetSdkVersion 29
         versionCode 1
         versionName "1.1"
     }
@@ -26,14 +26,14 @@ android {
 
 
 dependencies {
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.android.support:appcompat-v7:24.2.1'
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:recyclerview-v7:24.1.1'
-    compile project(':citypickerview')
-    compile 'com.google.code.gson:gson:2.8.1'
-    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.3'
-    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.3'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation project(':citypickerview')
+    implementation 'com.google.code.gson:gson:2.8.6'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.3'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.3'
     //http://www.open-open.com/jsoup/
-    compile 'org.jsoup:jsoup:1.11.2'
+    implementation 'org.jsoup:jsoup:1.11.2'
 }

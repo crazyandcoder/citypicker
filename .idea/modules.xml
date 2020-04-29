@@ -4,8 +4,12 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/citypicker.iml" filepath="$PROJECT_DIR$/citypicker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/citypicker-app.iml" filepath="$PROJECT_DIR$/app/citypicker-app.iml" group="citypicker/app" />
+      <module fileurl="file://$PROJECT_DIR$/citypickerview/citypicker-citypickerview.iml" filepath="$PROJECT_DIR$/citypickerview/citypicker-citypickerview.iml" group="citypicker/citypickerview" />
+      <module fileurl="file://$PROJECT_DIR$/lib_citydata/citypicker-lib_citydata.iml" filepath="$PROJECT_DIR$/lib_citydata/citypicker-lib_citydata.iml" group="citypicker/lib_citydata" />
       <module fileurl="file://$PROJECT_DIR$/citypickerview/citypickerview.iml" filepath="$PROJECT_DIR$/citypickerview/citypickerview.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib_citydata/lib_citydata.iml" filepath="$PROJECT_DIR$/lib_citydata/lib_citydata.iml" />
+      <module fileurl="file://$PROJECT_DIR$/projects-citypicker.iml" filepath="$PROJECT_DIR$/projects-citypicker.iml" group="citypicker" />
     </modules>
   </component>
 </project>

@@ -1,7 +1,7 @@
 package com.ihidea.as.citypicker.activity;
 
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +12,6 @@ import com.lljjcoder.Interface.OnCityItemClickListener;
 import com.lljjcoder.bean.CityBean;
 import com.lljjcoder.bean.DistrictBean;
 import com.lljjcoder.bean.ProvinceBean;
-import com.lljjcoder.citywheel.CityConfig;
 import com.lljjcoder.style.cityjd.JDCityConfig;
 import com.lljjcoder.style.cityjd.JDCityPicker;
 
