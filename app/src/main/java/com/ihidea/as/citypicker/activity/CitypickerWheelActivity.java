@@ -1,9 +1,9 @@
 package com.ihidea.as.citypicker.activity;
 
+import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Process;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -23,7 +23,7 @@ import com.lljjcoder.style.citylist.Toast.ToastUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CitypickerWheelActivity extends AppCompatActivity {
+public class CitypickerWheelActivity extends Activity {
 
     EditText mProEt;
 

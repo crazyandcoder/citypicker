@@ -1,8 +1,8 @@
 package com.ihidea.as.citypicker.activity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
@@ -10,7 +10,7 @@ import com.ihidea.as.citypicker.R;
 import com.lljjcoder.style.citythreelist.CityBean;
 import com.lljjcoder.style.citythreelist.ProvinceActivity;
 
-public class CitypickerThreeListActivity extends AppCompatActivity {
+public class CitypickerThreeListActivity extends Activity {
     TextView mListTv;
     
     TextView mResultTv;

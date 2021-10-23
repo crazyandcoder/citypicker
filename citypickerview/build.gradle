@@ -1,25 +1,17 @@
 apply plugin: 'com.android.library'
-
-//添加以下两个插件
 apply plugin: 'com.github.dcendents.android-maven'
-apply plugin: 'com.jfrog.bintray'
-
-//你的library版本号
-version = "5.2.1"
+group='com.github.crazyandcoder'
 
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion '28.0.2'
-
-    //资源前缀
-//    resourcePrefix "liji_"
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
 
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 23
-        versionCode 5
-        versionName "5.2.1"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
     }
     buildTypes {
         release {
@@ -28,123 +20,15 @@ android {
         }
     }
 
-    //增加lint选项，不加的话下面上传到jCenter有可能会报错
-    lintOptions {
-        abortOnError false
-    }
-
 }
-
-buildscript {
-    repositories {
-        jcenter()
-        google()
-    }
-
-}
-
-task makeJar(type: Copy) {
-    delete 'build/libs/citypicker.jar' //删除已经存在的jar包
-    from('build/intermediates/bundles/release/')//从该目录下加载要打包的文件
-    into('build/libs/')//jar包的保存目录
-    include('classes.jar')//设置过滤，只打包classes文件
-    rename('classes.jar', 'citypicker.jar')//重命名，mylibrary.jar 根据自己的需求设置
-}
-makeJar.dependsOn(build)
-
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.4.0'
-    compile 'com.google.code.gson:gson:2.8.1'
-    compile 'com.android.support:recyclerview-v7:23.4.0'
-    compile files('libs/pinyin4j-2.5.0.jar')
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'com.github.promeg:tinypinyin:2.0.3'
 }
 
-//你的library的地址
-def siteUrl = 'https://github.com/crazyandcoder/citypicker'
-def gitUrl = 'https://github.com/crazyandcoder/citypicker.git'
-def issueUrl = 'https://github.com/crazyandcoder/citypicker/issues'
-
-//这个蛮重要的，你上传到jCenter后一些文件存放的路径，如果不写或者写错了的话
-//可以不会产生pom文件，后面上传到jCenter后会报错，这个问题我搞了一下午！
-group = "liji.library.dev"
-install {
-    repositories.mavenInstaller {
-        // POM.xml文件内容
-        pom {
-            project {
-                packaging 'aar'
-                // 添加描述，不重要
-                name 'city picker'
-                url siteUrl
-                // 协议
-                licenses {
-                    license {
-                        name 'The Apache Software License, Version 2.0'
-                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-                    }
-                }
-                developers {
-                    developer {
-                        id 'liji' //your user ID
-                        name 'liji' //your name
-                        email 'lijiwork@sina.com' //your email
-                    }
-                }
-                scm {
-                    connection gitUrl
-                    developerConnection gitUrl
-                    url siteUrl
-                }
-            }
-        }
-    }
-}
-task sourcesJar(type: Jar) {
-    from android.sourceSets.main.java.srcDirs
-    classifier = 'sources'
-}
-
-//task javadoc(type: Javadoc) {
-//
-//    //增加编码，这行很重要，如果是windows系统，同时如果在代码中有中文的话，不加这行，上传会报错
-//    options.encoding="utf-8"
-//    source = android.sourceSets.main.java.srcDirs
-//    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-//}
-//task javadocJar(type: Jar, dependsOn: javadoc) {
-//    classifier = 'javadoc'
-//    from javadoc.destinationDir
-//}
-//artifacts {
-//    archives javadocJar
-//    archives sourcesJar
-//}
-Properties properties = new Properties()
-properties.load(project.rootProject.file('local.properties').newDataInputStream())
-bintray {
-    user = properties.getProperty("bintray.user")
-    key = properties.getProperty("bintray.apikey")
-    configurations = ['archives']
-    pkg {
-        //发布到Bintray的哪个仓库
-        repo = "maven"
-        //发布到Bintray上的名字
-        name = "citypickerview"
-        //项目描述
-        desc = "city picker"
-        websiteUrl = siteUrl
-        vcsUrl = gitUrl
-        issueTrackerUrl = issueUrl
-        licenses = ["Apache-2.0"]
-        //标签
-        labels = ['android']
-        publish = true
-        publicDownloadNumbers = true
-    }
-}
 
 

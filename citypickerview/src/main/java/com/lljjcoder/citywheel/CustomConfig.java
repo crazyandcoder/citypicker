@@ -86,20 +86,36 @@ public class CustomConfig {
     private int titleTextSize = 18;
 
 
-//    /**
-//     * 自定义的item布局
-//     */
-//    private Integer customItemLayout;
-//
-//    /**
-//     * 自定义的item txt id
-//     */
-//    private Integer customItemTextViewId;
+    /**
+     * 自定义的item布局
+     */
+    private Integer customItemLayout;
+
+    /**
+     * 自定义的item txt id
+     */
+    private Integer customItemTextViewId;
 
     /**
      * 是否显示滚轮上面的模糊阴影效果
      */
     private boolean drawShadows = true;
+
+
+    /**
+     * 第一次默认的显示省份，一般配合定位，使用
+     */
+    private String defaultProvinceName = "";
+
+    /**
+     * 第一次默认得显示城市，一般配合定位，使用
+     */
+    private String defaultCityName = "";
+
+    /**
+     * 第一次默认得显示，一般配合定位，使用
+     */
+    private String defaultDistrict = "";
 
 
     /**
@@ -202,6 +218,29 @@ public class CustomConfig {
         isDistrictCyclic = districtCyclic;
     }
 
+    public String getDefaultProvinceName() {
+        return defaultProvinceName == null ? "" : defaultProvinceName;
+    }
+
+    public void setDefaultProvinceName(String defaultProvinceName) {
+        this.defaultProvinceName = defaultProvinceName;
+    }
+
+    public String getDefaultCityName() {
+        return defaultCityName == null ? "" : defaultCityName;
+    }
+
+    public void setDefaultCityName(String defaultCityName) {
+        this.defaultCityName = defaultCityName;
+    }
+
+    public String getDefaultDistrict() {
+        return defaultDistrict == null ? "" : defaultDistrict;
+    }
+
+    public void setDefaultDistrict(String defaultDistrict) {
+        this.defaultDistrict = defaultDistrict;
+    }
     public String getCancelTextColorStr() {
         return cancelTextColorStr == null ? "" : cancelTextColorStr;
     }
@@ -282,22 +321,22 @@ public class CustomConfig {
         this.titleTextSize = titleTextSize;
     }
 
-//
-//    public Integer getCustomItemLayout() {
-//        return customItemLayout == null ? NONE : customItemLayout;
-//    }
-//
-//    public void setCustomItemLayout(int customItemLayout) {
-//        this.customItemLayout = customItemLayout;
-//    }
-//
-//    public Integer getCustomItemTextViewId() {
-//        return customItemTextViewId == null ? NONE : customItemTextViewId;
-//    }
-//
-//    public void setCustomItemTextViewId(Integer customItemTextViewId) {
-//        this.customItemTextViewId = customItemTextViewId;
-//    }
+    //
+    public Integer getCustomItemLayout() {
+        return customItemLayout == null ? NONE : customItemLayout;
+    }
+
+    public void setCustomItemLayout(int customItemLayout) {
+        this.customItemLayout = customItemLayout;
+    }
+
+    public Integer getCustomItemTextViewId() {
+        return customItemTextViewId == null ? NONE : customItemTextViewId;
+    }
+
+    public void setCustomItemTextViewId(Integer customItemTextViewId) {
+        this.customItemTextViewId = customItemTextViewId;
+    }
 
     public List<CustomCityData> getCityDataList() {
         return cityDataList;
@@ -347,6 +386,13 @@ public class CustomConfig {
         this.isProvinceCyclic = builder.isProvinceCyclic;
         this.isDistrictCyclic = builder.isDistrictCyclic;
         this.isCityCyclic = builder.isCityCyclic;
+        /**
+         * 默认的省市区地址
+         */
+        this.defaultDistrict = builder.defaultDistrict;
+        this.defaultCityName = builder.defaultCityName;
+        this.defaultProvinceName = builder.defaultProvinceName;
+
 
         /**
          * 是否显示城市和地区
@@ -359,11 +405,11 @@ public class CustomConfig {
          */
         this.isShowBackground = builder.isShowBackground;
 //
-//        /**
-//         * 自定义item的布局，必须制定Layout和id
-//         */
-//        this.customItemLayout = builder.customItemLayout;
-//        this.customItemTextViewId = builder.customItemTextViewId;
+        /**
+         * 自定义item的布局，必须制定Layout和id
+         */
+        this.customItemLayout = builder.customItemLayout;
+        this.customItemTextViewId = builder.customItemTextViewId;
 
         /**
          * 是否显示滚轮上面的模糊阴影效果
@@ -450,15 +496,15 @@ public class CustomConfig {
          */
         private boolean isShowBackground = true;
 
-//        /**
-//         * 自定义的item布局
-//         */
-//        private Integer customItemLayout;
-//
-//        /**
-//         * 自定义的item txt id
-//         */
-//        private Integer customItemTextViewId;
+        /**
+         * 自定义的item布局
+         */
+        private Integer customItemLayout;
+
+        /**
+         * 自定义的item txt id
+         */
+        private Integer customItemTextViewId;
 
         /**
          * 是否显示滚轮上面的模糊阴影效果
@@ -479,6 +525,21 @@ public class CustomConfig {
         private int lineHeigh = 3;
 
         private List<CustomCityData> cityDataList = new ArrayList<>();
+
+        /**
+         * 第一次默认的显示省份，一般配合定位，使用
+         */
+        private String defaultProvinceName = "";
+
+        /**
+         * 第一次默认得显示城市，一般配合定位，使用
+         */
+        private String defaultCityName = "";
+
+        /**
+         * 第一次默认得显示，一般配合定位，使用
+         */
+        private String defaultDistrict = "";
 
         public Builder() {
         }
@@ -501,6 +562,39 @@ public class CustomConfig {
 
         public Builder setCityData(List<CustomCityData> data) {
             this.cityDataList = data;
+            return this;
+        }
+
+        /**
+         * 第一次默认的显示省份，一般配合定位，使用
+         *
+         * @param defaultProvinceName
+         * @return
+         */
+        public Builder province(String defaultProvinceName) {
+            this.defaultProvinceName = defaultProvinceName;
+            return this;
+        }
+
+        /**
+         * 第一次默认得显示城市，一般配合定位，使用
+         *
+         * @param defaultCityName
+         * @return
+         */
+        public Builder city(String defaultCityName) {
+            this.defaultCityName = defaultCityName;
+            return this;
+        }
+
+        /**
+         * 第一次默认地区显示，一般配合定位，使用
+         *
+         * @param defaultDistrict
+         * @return
+         */
+        public Builder district(String defaultDistrict) {
+            this.defaultDistrict = defaultDistrict;
             return this;
         }
 
@@ -702,27 +796,28 @@ public class CustomConfig {
             return this;
         }
 //
-//        /**
-//         * 自定义item布局
-//         *
-//         * @param itemLayout
-//         * @return
-//         */
-//        public Builder setCustomItemLayout(Integer itemLayout) {
-//            this.customItemLayout = itemLayout;
-//            return this;
-//        }
-//
-//        /**
-//         * 自定义item布局中的id
-//         *
-//         * @param setCustomItemTextViewId
-//         * @return
-//         */
-//        public Builder setCustomItemTextViewId(Integer setCustomItemTextViewId) {
-//            this.customItemTextViewId = setCustomItemTextViewId;
-//            return this;
-//        }
+
+        /**
+         * 自定义item布局
+         *
+         * @param itemLayout
+         * @return
+         */
+        public Builder setCustomItemLayout(Integer itemLayout) {
+            this.customItemLayout = itemLayout;
+            return this;
+        }
+
+        /**
+         * 自定义item布局中的id
+         *
+         * @param setCustomItemTextViewId
+         * @return
+         */
+        public Builder setCustomItemTextViewId(Integer setCustomItemTextViewId) {
+            this.customItemTextViewId = setCustomItemTextViewId;
+            return this;
+        }
 
         public CustomConfig build() {
             CustomConfig config = new CustomConfig(this);

@@ -1,16 +1,17 @@
 package com.ihidea.as.citypicker.activity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+
 
 import com.ihidea.as.citypicker.R;
 import com.lljjcoder.style.citylist.CityListSelectActivity;
 import com.lljjcoder.style.citylist.bean.CityInfoBean;
 
-public class CitypickerListActivity extends AppCompatActivity {
+public class CitypickerListActivity extends Activity {
     
     TextView mListTv;
     

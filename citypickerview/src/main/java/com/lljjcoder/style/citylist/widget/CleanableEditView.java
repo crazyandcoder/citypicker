@@ -10,13 +10,13 @@ package com.lljjcoder.style.citylist.widget;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-import android.support.v7.widget.AppCompatEditText;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.EditText;
 
 /**
  * 说明:
@@ -24,7 +24,7 @@ import android.view.View;
  * 邮箱:fangkaijin@gmail.com
  */
 
-public class CleanableEditView extends AppCompatEditText implements TextWatcher, View.OnFocusChangeListener {
+public class CleanableEditView extends EditText implements TextWatcher, View.OnFocusChangeListener {
     /**
      * 左右两侧图片资源
      */

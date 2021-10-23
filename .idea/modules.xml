@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/citypicker.iml" filepath="$PROJECT_DIR$/citypicker.iml" />
-      <module fileurl="file://$PROJECT_DIR$/citypickerview/citypickerview.iml" filepath="$PROJECT_DIR$/citypickerview/citypickerview.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lib_citydata/lib_citydata.iml" filepath="$PROJECT_DIR$/lib_citydata/lib_citydata.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="citypicker/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/citypicker.iml" filepath="$PROJECT_DIR$/.idea/citypicker.iml" group="citypicker" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/citypickerview/citypickerview.iml" filepath="$PROJECT_DIR$/.idea/modules/citypickerview/citypickerview.iml" group="citypicker/citypickerview" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib_citydata/lib_citydata.iml" filepath="$PROJECT_DIR$/.idea/modules/lib_citydata/lib_citydata.iml" group="citypicker/lib_citydata" />
     </modules>
   </component>
 </project>

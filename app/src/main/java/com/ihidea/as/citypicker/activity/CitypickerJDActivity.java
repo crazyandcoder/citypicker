@@ -1,22 +1,23 @@
 package com.ihidea.as.citypicker.activity;
 
+import android.app.Activity;
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.ihidea.as.citypicker.R;
 import com.lljjcoder.Interface.OnCityItemClickListener;
 import com.lljjcoder.bean.CityBean;
 import com.lljjcoder.bean.DistrictBean;
 import com.lljjcoder.bean.ProvinceBean;
-import com.lljjcoder.citywheel.CityConfig;
 import com.lljjcoder.style.cityjd.JDCityConfig;
 import com.lljjcoder.style.cityjd.JDCityPicker;
 
-public class CitypickerJDActivity extends AppCompatActivity {
+public class CitypickerJDActivity extends Activity {
     JDCityPicker cityPicker;
     private Button jdBtn;
     private TextView resultV;

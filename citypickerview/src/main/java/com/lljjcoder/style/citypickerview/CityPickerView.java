@@ -312,7 +312,7 @@ public class CityPickerView implements CanShow, OnWheelChangedListener {
         int provinceDefault = -1;
         if (!TextUtils.isEmpty(config.getDefaultProvinceName()) && proArra.size() > 0) {
             for (int i = 0; i < proArra.size(); i++) {
-                if (proArra.get(i).getName().contains(config.getDefaultProvinceName())) {
+                if (proArra.get(i).getName().equals(config.getDefaultProvinceName())) {
                     provinceDefault = i;
                     break;
                 }
@@ -391,7 +391,7 @@ public class CityPickerView implements CanShow, OnWheelChangedListener {
         int cityDefault = -1;
         if (!TextUtils.isEmpty(config.getDefaultCityName()) && cities.size() > 0) {
             for (int i = 0; i < cities.size(); i++) {
-                if (config.getDefaultCityName().contains(cities.get(i).getName())) {
+                if (config.getDefaultCityName().equals(cities.get(i).getName())) {
                     cityDefault = i;
                     break;
                 }
@@ -446,7 +446,7 @@ public class CityPickerView implements CanShow, OnWheelChangedListener {
                 int districtDefault = -1;
                 if (!TextUtils.isEmpty(config.getDefaultDistrict()) && areas.size() > 0) {
                     for (int i = 0; i < areas.size(); i++) {
-                        if (config.getDefaultDistrict().contains(areas.get(i).getName())) {
+                        if (config.getDefaultDistrict().equals(areas.get(i).getName())) {
                             districtDefault = i;
                             break;
                         }

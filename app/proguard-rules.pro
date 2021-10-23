@@ -15,3 +15,14 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+-keep class com.lljjcoder.**{
+	*;
+}
+
+-dontwarn demo.**
+-keep class demo.**{*;}
+-dontwarn net.sourceforge.pinyin4j.**
+-keep class net.sourceforge.pinyin4j.**{*;}
+-keep class net.sourceforge.pinyin4j.format.**{*;}
+-keep class net.sourceforge.pinyin4j.format.exception.**{*;}

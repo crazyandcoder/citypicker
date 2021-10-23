@@ -1,14 +1,3 @@
-
-
-![]()
-
-
-<p align="center">
-  <a href="javascript:;" rel="noopener" target="_blank"><img width="70%" src="https://img-blog.csdnimg.cn/20191029200026597.png" alt="citypicker logo"></a></p>
-</p>
-
-
-
 ### **CityPicker 城市选择器**
 
  
@@ -23,15 +12,33 @@
 
 #### **gradle引用**
 
+1. 在 Project 的 build.gradle 中增加 jitpack 的 maven 地址
+
 ```
-implementation 'liji.library.dev:citypickerview:5.2.1'
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
 ```
+
+2. 在 app 的 build.gradle 中增加我们开源库的引用
+
+```
+	dependencies {
+	        implementation 'com.github.crazyandcoder:citypicker:6.0.2'
+	}
+```
+
 
 ### **更新说明**
 #### 最新版本
 
-**V5.2.1版本更新内容（2020.02.24）**
-1. 发布5.2.1版本,更新山东省济南市下面的区数据信息。
+**V6.0.2版本更新内容（2021.07.09）**
+  1. 更新数据源，使用最新省市区行政数据
+  2. 优化汉字转拼音逻辑，提高解析精度
+
 
 #### 历史更新记录
 
@@ -103,6 +110,24 @@ QQ群：417846442
 ### **其他问题wiki**
 
 https://github.com/crazyandcoder/citypicker/wiki
+
+### **License**
+```
+Copyright 2016 crazyandcoder
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
+
 
 ### 码农的小世界
 欢迎关注本人公众号，学习更多知识，每天定时更新干货。

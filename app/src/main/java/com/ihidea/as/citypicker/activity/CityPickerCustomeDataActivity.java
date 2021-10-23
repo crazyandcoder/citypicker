@@ -1,10 +1,9 @@
 package com.ihidea.as.citypicker.activity;
 
+import android.app.Activity;
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
@@ -14,14 +13,13 @@ import android.widget.TextView;
 import com.ihidea.as.citypicker.R;
 import com.lljjcoder.Interface.OnCustomCityPickerItemClickListener;
 import com.lljjcoder.bean.CustomCityData;
-import com.lljjcoder.citywheel.CityConfig;
 import com.lljjcoder.citywheel.CustomConfig;
 import com.lljjcoder.style.citycustome.CustomCityPicker;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class CityPickerCustomeDataActivity extends AppCompatActivity {
+public class CityPickerCustomeDataActivity extends Activity {
 
     private TextView customeBtn;
     private TextView resultTv;
@@ -251,7 +249,12 @@ public class CityPickerCustomeDataActivity extends AppCompatActivity {
                 .visibleItemsCount(visibleItems)
                 .setCityData(mProvinceListData)
                 .provinceCyclic(isProvinceCyclic)
+                .province("浙江省")
+                .city("宁波市")
+                .district("鄞州区")
                 .cityCyclic(isCityCyclic)
+                .setCustomItemLayout(R.layout.item_custome_city)//自定义item的布局
+                .setCustomItemTextViewId(R.id.item_custome_city_name_tv)
                 .districtCyclic(isDistrictCyclic)
                 .drawShadows(isShowBg)
                 .setCityWheelType(mWheelType)

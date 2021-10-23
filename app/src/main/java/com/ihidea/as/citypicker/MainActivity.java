@@ -1,10 +1,12 @@
 package com.ihidea.as.citypicker;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.ihidea.as.citypicker.activity.CityPickerCustomeDataActivity;
 import com.ihidea.as.citypicker.activity.CitypickerJDActivity;
@@ -19,7 +21,7 @@ import com.ihidea.as.citypicker.widget.DividerGridItemDecoration;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     RecyclerView mCitypickerRv;
 

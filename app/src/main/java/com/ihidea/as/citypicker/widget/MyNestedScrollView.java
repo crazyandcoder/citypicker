@@ -1,10 +1,11 @@
 package com.ihidea.as.citypicker.widget;
 
 import android.content.Context;
-import android.support.v4.widget.NestedScrollView;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.ViewConfiguration;
+
+import androidx.core.widget.NestedScrollView;
 
 /**
  * Created by liji on 2016/7/31.

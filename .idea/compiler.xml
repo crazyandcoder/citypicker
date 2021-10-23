@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="citypicker-lib_citydata" target="1.7" />
+      <module name="citypicker.app" target="1.8" />
+      <module name="citypicker.citypickerview" target="1.8" />
+      <module name="citypicker.lib_citydata" target="1.7" />
+      <module name="lib_citydata" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

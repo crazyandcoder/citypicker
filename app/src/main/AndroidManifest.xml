@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ihidea.as.citypicker">
-
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <application
         android:name=".MyApp"
         android:allowBackup="true"
@@ -22,7 +26,6 @@
         </activity>
         <activity android:name=".activity.CitypickerListActivity" />
         <activity android:name=".activity.CitypickerWheelActivity" />
-        <activity android:name=".test.TestActivity" />
         <activity android:name=".activity.CitypickerThreeListActivity" />
         <activity android:name=".activity.CitypickerJDActivity" />
     </application>
